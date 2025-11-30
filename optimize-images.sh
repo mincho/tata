@@ -3,7 +3,7 @@
 # Web optimization script for memoir images
 # This will create optimized versions in assets/images/
 
-SOURCE_DIR="source/pics"
+SOURCE_DIR="${1:-source/pics}"
 OUTPUT_DIR="assets/images"
 
 # Create output directory if it doesn't exist
@@ -25,16 +25,15 @@ echo ""
 # Counter
 count=0
 
-# Process each JPG file
-for img in "$SOURCE_DIR"/*.JPG; do
+# Process each image file
+for img in "$SOURCE_DIR"/*.{JPG,jpg,PNG,png,jpeg,JPEG}; do
     # Skip if no files found
     [ -e "$img" ] || continue
 
     # Get filename without path
     filename=$(basename "$img")
-    # Convert to lowercase and change extension
-    output_name="${filename%.JPG}.jpg"
-    output_name="${output_name%.jpg}.jpg"
+    # Convert to jpg extension (handle all input formats)
+    output_name="${filename%.*}.jpg"
     output_path="$OUTPUT_DIR/$output_name"
 
     # Get original dimensions
