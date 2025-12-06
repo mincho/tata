@@ -56,6 +56,35 @@ body {
     margin-bottom: var(--spacing-xxl);
 }
 
+/* Language toggle */
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+}
+
+.current-lang {
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.lang-switch {
+    color: var(--color-accent);
+    text-decoration: none;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.lang-switch:hover {
+    background-color: var(--color-accent);
+    color: white;
+}
+
 .home-link {
     display: inline-block;
     font-family: var(--font-sans);
