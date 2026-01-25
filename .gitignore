@@ -1,0 +1,19 @@
+# Working folders
+assets/batch2/
+
+# macOS system files
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*~
